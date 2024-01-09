@@ -11,7 +11,7 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/vitepress-yandex-metrika.mjs",
+      "import": "./dist/vitepress-yandex-metrika.js",
       "require": "./dist/vitepress-yandex-metrika.cjs"
     }
   },
