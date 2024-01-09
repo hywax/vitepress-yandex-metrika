@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v0.0.2
+
+[compare changes](https://github.com/hywax/vitepress-yandex-metrika/compare/v0.0.1...v0.0.2)
+
+### 🩹 Fixes
+
+- Exports import path ([e31cd8d](https://github.com/hywax/vitepress-yandex-metrika/commit/e31cd8d))
+
+### 🏡 Chore
+
+- Update package.json ([1ce1ecd](https://github.com/hywax/vitepress-yandex-metrika/commit/1ce1ecd))
+- Include only files in folder dist ([7dc1405](https://github.com/hywax/vitepress-yandex-metrika/commit/7dc1405))
+- Add license ([9ff75d3](https://github.com/hywax/vitepress-yandex-metrika/commit/9ff75d3))
+
+### ❤️ Contributors
+
+- Hywax <a.hywax@gmail.com>
+
 ## v0.0.1
 
 
