@@ -2,6 +2,12 @@
   "name": "@hywax/vitepress-yandex-metrika",
   "type": "module",
   "version": "0.0.1",
+  "repository": {
+    "url": "https://github.com/hywax/vitepress-yandex-metrika.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "import": "./dist/vitepress-yandex-metrika.mjs",
