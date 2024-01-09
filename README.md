@@ -53,7 +53,7 @@ export default defineConfig({
       yandexMetrikaPlugin({
         counter: {
           id: '1234567',
-          // ... other settings
+          // initParams: { ... } Other settings, if necessary
         },
       }),
     ],
