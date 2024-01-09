@@ -1,1 +1,2 @@
-export { sum } from './sum'
+export * from './hit'
+export * from './plugin'
