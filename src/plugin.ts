@@ -2,7 +2,7 @@ import type { HtmlTagDescriptor, Plugin, ResolvedConfig } from 'vite'
 
 export interface Counter {
   id: string
-  initParams: {
+  initParams?: {
     defer?: boolean
     clickmap?: boolean
     trackLinks?: boolean
@@ -30,6 +30,7 @@ function injectScript(): HtmlTagDescriptor {
 
   return {
     tag: 'script',
+    injectTo: 'body',
     children: template,
   }
 }
@@ -38,11 +39,12 @@ function injectTag(counter: Counter): HtmlTagDescriptor[] {
   return [
     {
       tag: 'script',
-      children: `ym(${counter.id}, "init", ${JSON.stringify(counter.initParams)});`,
+      injectTo: 'body',
+      children: `ym(${counter.id}, "init", ${JSON.stringify(counter.initParams || {})});`,
     },
     {
       tag: 'noscript',
-      injectTo: 'body-prepend',
+      injectTo: 'body',
       children: `<div><img src="https://mc.yandex.ru/watch/${counter.id}" style="position:absolute; left:-9999px;" alt="" /></div>`,
     },
   ]
