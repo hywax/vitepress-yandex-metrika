@@ -1,6 +1,32 @@
 # Changelog
 
 
+## v0.1.0
+
+[compare changes](https://github.com/hywax/vitepress-yandex-metrika/compare/v0.0.2...v0.1.0)
+
+### 🚀 Enhancements
+
+- ⚠️  Inject script ([44f954b](https://github.com/hywax/vitepress-yandex-metrika/commit/44f954b))
+- Add CDN for metrika ([4f613fe](https://github.com/hywax/vitepress-yandex-metrika/commit/4f613fe))
+
+### 🏡 Chore
+
+- Provide page url ([1154666](https://github.com/hywax/vitepress-yandex-metrika/commit/1154666))
+- Scripts injects to body ([b085ec5](https://github.com/hywax/vitepress-yandex-metrika/commit/b085ec5))
+
+### 🎨 Styles
+
+- **eslint:** Run ([93d3538](https://github.com/hywax/vitepress-yandex-metrika/commit/93d3538))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Inject script ([44f954b](https://github.com/hywax/vitepress-yandex-metrika/commit/44f954b))
+
+### ❤️ Contributors
+
+- Hywax <a.hywax@gmail.com>
+
 ## v0.0.2
 
 [compare changes](https://github.com/hywax/vitepress-yandex-metrika/compare/v0.0.1...v0.0.2)

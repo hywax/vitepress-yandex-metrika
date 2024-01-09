@@ -1,7 +1,7 @@
 {
   "name": "@hywax/vitepress-yandex-metrika",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "license": "MIT",
   "repository": {
     "url": "https://github.com/hywax/vitepress-yandex-metrika.git"
