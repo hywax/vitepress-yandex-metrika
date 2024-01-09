@@ -14,7 +14,7 @@ export function yandexMetrikaHit(ctx: EnhanceAppContext) {
   const cacheAfterRouteChange = router.onAfterRouteChanged
 
   router.onAfterRouteChanged = (to: string) => {
-    counters.forEach((counter) => counter?.hit())
+    counters.forEach((counter) => counter?.hit(to))
 
     cacheAfterRouteChange?.(to)
   }

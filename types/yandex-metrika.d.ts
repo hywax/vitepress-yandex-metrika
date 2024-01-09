@@ -6,7 +6,7 @@
 export {}
 
 interface Counter {
-  hit(): void
+  hit(to: string): void
 }
 
 interface Ya {
