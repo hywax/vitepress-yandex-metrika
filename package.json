@@ -14,6 +14,7 @@
       "require": "./dist/vitepress-yandex-metrika.cjs"
     }
   },
+  "files": ["dist"],
   "main": "./dist/vitepress-yandex-metrika.cjs",
   "module": "./dist/vitepress-yandex-metrika.js",
   "types": "./dist/vitepress-yandex-metrika.d.ts",
