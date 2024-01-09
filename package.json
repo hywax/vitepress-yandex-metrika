@@ -1,17 +1,17 @@
 {
-  "name": "vite-vanilla-library",
+  "name": "@hywax/vitepress-yandex-metrika",
   "type": "module",
   "version": "0.0.0",
   "private": true,
   "exports": {
     ".": {
-      "import": "./dist/vite-vanilla-library.mjs",
-      "require": "./dist/vite-vanilla-library.cjs"
+      "import": "./dist/vitepress-yandex-metrika.mjs",
+      "require": "./dist/vitepress-yandex-metrika.cjs"
     }
   },
-  "main": "./dist/vite-vanilla-library.cjs",
-  "module": "./dist/vite-vanilla-library.js",
-  "types": "./dist/vite-vanilla-library.d.ts",
+  "main": "./dist/vitepress-yandex-metrika.cjs",
+  "module": "./dist/vitepress-yandex-metrika.js",
+  "types": "./dist/vitepress-yandex-metrika.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
