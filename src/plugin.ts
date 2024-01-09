@@ -19,14 +19,15 @@ export interface Counter {
 export interface ViteYandexMetrika {
   enableDev?: boolean
   counter: Counter | Counter[]
+  cdn?: string
 }
 
-function injectScript(): HtmlTagDescriptor {
+function injectScript(url: string): HtmlTagDescriptor {
   const template = `(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
   m[i].l=1*new Date();
   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");`
+(window, document, "script", "${url}/metrika/tag.js", "ym");`
 
   return {
     tag: 'script',
@@ -35,7 +36,7 @@ function injectScript(): HtmlTagDescriptor {
   }
 }
 
-function injectTag(counter: Counter): HtmlTagDescriptor[] {
+function injectTag(counter: Counter, url: string): HtmlTagDescriptor[] {
   return [
     {
       tag: 'script',
@@ -45,7 +46,7 @@ function injectTag(counter: Counter): HtmlTagDescriptor[] {
     {
       tag: 'noscript',
       injectTo: 'body',
-      children: `<div><img src="https://mc.yandex.ru/watch/${counter.id}" style="position:absolute; left:-9999px;" alt="" /></div>`,
+      children: `<div><img src="${url}/watch/${counter.id}" style="position:absolute; left:-9999px;" alt="" /></div>`,
     },
   ]
 }
@@ -60,17 +61,18 @@ export function yandexMetrikaPlugin(options: ViteYandexMetrika): Plugin {
     },
     transformIndexHtml() {
       const tags: HtmlTagDescriptor[] = []
+      const url = options.cdn || 'https://mc.yandex.ru'
 
       if (viteConfig.command === 'serve' && !options.enableDev) {
         return tags
       }
 
-      tags.push(injectScript())
+      tags.push(injectScript(url))
 
       if (Array.isArray(options.counter)) {
-        options.counter.forEach((counter) => tags.push(...injectTag(counter)))
+        options.counter.forEach((counter) => tags.push(...injectTag(counter, url)))
       } else {
-        tags.push(...injectTag(options.counter))
+        tags.push(...injectTag(options.counter, url))
       }
 
       return tags
