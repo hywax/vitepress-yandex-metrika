@@ -2,7 +2,6 @@
   "name": "@hywax/vitepress-yandex-metrika",
   "type": "module",
   "version": "0.0.0",
-  "private": true,
   "exports": {
     ".": {
       "import": "./dist/vitepress-yandex-metrika.mjs",
