@@ -43,54 +43,44 @@ npm install @hywax/vitepress-yandex-metrika -D
 
 ### 🚀 Setup
 
-1. Add `yandexMetrikaPlugin` to the `plugins` section of `config.ts`
+Add `yandexMetrika` to the `enhanceApp` section of theme `index.ts`
 
 ```typescript
-// .vitepress/config.ts
-export default defineConfig({
-  vite: {
-    plugins: [
-      yandexMetrikaPlugin({
-        counter: {
-          id: '1234567',
-          // initParams: { ... } Other settings, if necessary
-        },
-      }),
-    ],
-  }
-})
-```
-
-2. Add `yandexMetrikaHit` to the `enhanceApp` section of theme `index.ts`
-```typescript
+// .vitepress/theme/index.ts
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import { yandexMetrikaHit } from '@hywax/vitepress-yandex-metrika'
+import { yandexMetrika } from '@hywax/vitepress-yandex-metrika'
 
 export default {
   extends: DefaultTheme,
   enhanceApp(ctx) {
-    yandexMetrikaHit(ctx)
+    yandexMetrika(ctx, {
+      counter: { id: 12345678 },
+    })
   },
 } satisfies Theme
 ```
 
 ### ⚙️ Configuration
 
-You can customize the plugin `yandexMetrikaPlugin` by passing the required parameters to the settings object.
+You can customize the plugin `yandexMetrika` by passing the required parameters to the settings object.
 
-| Name                | Default value | Type    | Description                                                                                                               |
-|---------------------|---------------|---------|---------------------------------------------------------------------------------------------------------------------------|
-| defer               | `false`       | Boolean | Whether to disable automatically sending data during tag initialization                                                   |
-| clickmap            | `true`        | Boolean | Whether to collect data for a click map                                                                                   |
-| trackLinks          | `true`        | Boolean | Track clicks on outbound links                                                                                            |
-| accurateTrackBounce | `true`        | Boolean | Number                                                                                                                    |Accurate bounce rate The parameter can accept these values:  true — Enable the accurate bounce rate, with a non-bounce event registered after 15000 ms (15 s). false — Don't enable the accurate bounce rate. <N> (integer) — Enable the accurate bounce rate. Non-bounce events are recorded after <N> ms.|
-| webvisor            | `false`       | Boolean | Whether to use Session Replay                                                                                             |
-| ecommerce           | `false`       | Boolean | String                                                                                                                    | Array|Collect data for e-commerce — Ecommerce.  true — Enable e-commerce data collection. Data is transmitted via a JavaScript array named dataLayer in the global namespace (window.dataLayer) false — Disable Ecommerce data collection. <objectName> (String) — Enable Ecommerce data collection. Data is transmitted via a JavaScript array named <objectName> in the global namespace (window.<objectName>) <array> (Array) — Enable Ecommerce data collection. Data is transmitted via a JavaScript <array>|
-| trustedDomains      | `[]`          | Array   | Indicates a trusted domain for recording the contents of a child iframe. Contains the domain address of the parent window |
-| childIframe         | `false`       | Boolean | Whether to record iframe contents without a tag in a child window                                                         |
-| type                | `0`           | Number  | Tag type. 1 for YAN                                                                                                       |
-| triggerEvent        | `false`       | Boolean | Whether to check if the tag is ready                                                                                      |
+| Name                                   | Default value                         | Type                        | Description                                                                                                               |
+|----------------------------------------|---------------------------------------|-----------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| enabled                                | `true`                                | Boolean                     | Active Yandex.Metrica                                                                                                     |
+| counter.id                             | **required**                          | Number                      | Yandex.Metrica tag ID                                                                                                     |
+| counter.initParams.defer               | `false`                               | Boolean                     | Whether to disable automatically sending data during tag initialization                                                   |
+| counter.initParams.clickmap            | `true`                                | Boolean                     | Whether to collect data for a click map                                                                                   |
+| counter.initParams.trackLinks          | `true`                                | Boolean                     | Track clicks on outbound links                                                                                            |
+| counter.initParams.accurateTrackBounce | `true`                                | Boolean \| Number           | Accurate bounce rate The parameter can accept these valuesAccurate bounce rate                                            |
+| counter.initParams.webvisor            | `false`                               | Boolean                     | Whether to use Session Replay                                                                                             |
+| counter.initParams.ecommerce           | `false`                               | Boolean \| String  \| Array | Collect data for e-commerce — Ecommerce.                                                                                  |
+| counter.initParams.trustedDomains      | `-`                                   | Array                       | Indicates a trusted domain for recording the contents of a child iframe. Contains the domain address of the parent window |
+| counter.initParams.childIframe         | `false`                               | Boolean                     | Whether to record iframe contents without a tag in a child window                                                         |
+| counter.initParams.type                | `0`                                   | Number                      | Tag type. 1 for YAN                                                                                                       |
+| counter.initParams.triggerEvent        | `false`                               | Boolean                     | Whether to check if the tag is ready                                                                                      |
+| cdn.tag                                | `https://mc.yandex.ru/metrika/tag.js` | String                      | CDN link for tag                                                                                                          |
+| cdn.watch                              | `https://mc.yandex.ru/watch`          | String                      | CDN link for pixel image                                                                                                  |
 
 More information can be found on the [documentation page](https://yandex.com/support/metrica/code/counter-initialize.html).
 
