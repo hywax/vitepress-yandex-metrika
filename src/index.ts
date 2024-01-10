@@ -1,6 +1,6 @@
 import type { EnhanceAppContext } from 'vitepress'
 
-export interface Counter {
+export interface YandexMetrikaCounter {
   id: number
   initParams?: {
     defer?: boolean
@@ -16,9 +16,9 @@ export interface Counter {
   }
 }
 
-export interface Options {
+export interface YandexMetrikaOptions {
   enabled?: boolean
-  counter: Counter | Counter[]
+  counter: YandexMetrikaCounter | YandexMetrikaCounter[]
   cdn?: {
     tag?: string
     watch?: string
@@ -42,7 +42,7 @@ function injectStackMetrikaScript() {
   window.ym.l = new Date().getTime()
 }
 
-function injectCounter(counter: Counter, url?: string) {
+function injectCounter(counter: YandexMetrikaCounter, url?: string) {
   if (!window.ym) {
     return
   }
@@ -58,7 +58,7 @@ function injectCounter(counter: Counter, url?: string) {
   wrapper.appendChild(pixel)
 }
 
-export function yandexMetrika(ctx: EnhanceAppContext, options: Options) {
+export function yandexMetrika(ctx: EnhanceAppContext, options: YandexMetrikaOptions) {
   if (!(options.enabled || true) || typeof window === 'undefined') {
     return
   }
