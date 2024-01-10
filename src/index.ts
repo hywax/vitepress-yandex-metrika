@@ -19,13 +19,16 @@ export interface Counter {
 export interface Options {
   enabled?: boolean
   counter: Counter | Counter[]
-  cdn?: string
+  cdn?: {
+    tag?: string
+    watch?: string
+  }
 }
 
-function injectMetrikaScript() {
+function injectMetrikaScript(url?: string) {
   const metrikaScript = document.createElement('script')
 
-  metrikaScript.src = 'https://mc.yandex.ru/metrika/tag.js'
+  metrikaScript.src = url || 'https://mc.yandex.ru/metrika/tag.js'
   metrikaScript.async = true
 
   document.body.appendChild(metrikaScript)
@@ -39,7 +42,7 @@ function injectStackMetrikaScript() {
   window.ym.l = new Date().getTime()
 }
 
-function injectCounter(counter: Counter) {
+function injectCounter(counter: Counter, url?: string) {
   if (!window.ym) {
     return
   }
@@ -47,7 +50,7 @@ function injectCounter(counter: Counter) {
   window.ym(counter.id, 'init', counter.initParams)
 
   const pixel = document.createElement('img')
-  pixel.src = `https://mc.yandex.ru/watch/${counter.id}`
+  pixel.src = `${url || 'https://mc.yandex.ru/watch'}/${counter.id}`
   pixel.style.position = 'absolute'
   pixel.style.left = '-9999px'
 
@@ -60,13 +63,13 @@ export function yandexMetrika(ctx: EnhanceAppContext, options: Options) {
     return
   }
 
-  injectMetrikaScript()
+  injectMetrikaScript(options?.cdn?.tag)
   injectStackMetrikaScript()
 
   if (Array.isArray(options.counter)) {
-    options.counter.forEach((counter) => injectCounter(counter))
+    options.counter.forEach((counter) => injectCounter(counter, options?.cdn?.watch))
   } else {
-    injectCounter(options.counter)
+    injectCounter(options.counter, options?.cdn?.watch)
   }
 
   const { router } = ctx
