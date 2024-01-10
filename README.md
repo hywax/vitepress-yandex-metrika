@@ -13,8 +13,8 @@ Plugin for VitePress to track Yandex Metrika statistics.
 
 * [Features](#-features)
 * [Usage](#-usage)
-    * [Setup](#-setup)
-    * [Configuration](#-configuration)
+  * [Setup](#-setup)
+  * [Configuration](#-configuration)
 * [License](#-license)
 </details>
 
@@ -65,22 +65,32 @@ export default {
 
 You can customize the plugin `yandexMetrika` by passing the required parameters to the settings object.
 
-| Name                                   | Default value                       | Type                        | Description                                                                                                               |
-|----------------------------------------|-------------------------------------|-----------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| enabled                                | true                                | Boolean                     | Active Yandex.Metrica                                                                                                     |
-| counter.id                             | **required**                        | Number                      | Yandex.Metrica tag ID                                                                                                     |
-| counter.initParams.defer               | false                               | Boolean                     | Whether to disable automatically sending data during tag initialization                                                   |
-| counter.initParams.clickmap            | true                                | Boolean                     | Whether to collect data for a click map                                                                                   |
-| counter.initParams.trackLinks          | true                                | Boolean                     | Track clicks on outbound links                                                                                            |
-| counter.initParams.accurateTrackBounce | true                                | Boolean \| Number           | Accurate bounce rate The parameter can accept these valuesAccurate bounce rate                                            |
-| counter.initParams.webvisor            | false                               | Boolean                     | Whether to use Session Replay                                                                                             |
-| counter.initParams.ecommerce           | false                               | Boolean \| String  \| Array | Collect data for e-commerce — Ecommerce.                                                                                  |
-| counter.initParams.trustedDomains      | -                                   | Array                       | Indicates a trusted domain for recording the contents of a child iframe. Contains the domain address of the parent window |
-| counter.initParams.childIframe         | false                               | Boolean                     | Whether to record iframe contents without a tag in a child window                                                         |
-| counter.initParams.type                | 0                                   | Number                      | Tag type. 1 for YAN                                                                                                       |
-| counter.initParams.triggerEvent        | false                               | Boolean                     | Whether to check if the tag is ready                                                                                      |
-| cdn.tag                                | https://mc.yandex.ru/metrika/tag.js | String                      | CDN link for tag                                                                                                          |
-| cdn.watch                              | https://mc.yandex.ru/watch          | String                      | CDN link for pixel image                                                                                                  |
+```typescript
+export interface YandexMetrikaOptions {
+  enabled?: boolean                                             // default: true
+  counter: YandexMetrikaCounter | YandexMetrikaCounter[]
+  cdn?: {
+    tag?: string                                                // default: https://mc.yandex.ru/metrika/tag.js
+    watch?: string                                              // default: https://mc.yandex.ru/watch
+  }
+}
+
+export interface YandexMetrikaCounter {
+  id: number
+  initParams?: {
+    defer?: boolean                                             // default: false
+    clickmap?: boolean                                          // default: true
+    trackLinks?: boolean                                        // default: true
+    accurateTrackBounce?: boolean                               // default: true
+    webvisor?: boolean                                          // default: false
+    ecommerce?: boolean | string | Array<string | boolean>      // default: false
+    trustedDomains?: string[]                                   // default: -
+    childIframe?: boolean                                       // default: false
+    type?: number                                               // default: 0
+    triggerEvent?: boolean                                      // default: false
+  }
+}
+```
 
 More information can be found on the [documentation page](https://yandex.com/support/metrica/code/counter-initialize.html).
 
