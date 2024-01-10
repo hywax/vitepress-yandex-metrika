@@ -1,6 +1,41 @@
 # Changelog
 
 
+## v0.2.0
+
+[compare changes](https://github.com/hywax/vitepress-yandex-metrika/compare/v0.1.0...v0.2.0)
+
+### 🚀 Enhancements
+
+- Split cdn links to: tag, watch ([1c001c2](https://github.com/hywax/vitepress-yandex-metrika/commit/1c001c2))
+
+### 💅 Refactors
+
+- ⚠️  Server side removed, connection now only on frontend ([2147eca](https://github.com/hywax/vitepress-yandex-metrika/commit/2147eca))
+
+### 📖 Documentation
+
+- Add package cover ([406a462](https://github.com/hywax/vitepress-yandex-metrika/commit/406a462))
+- Update README.md ([84e2269](https://github.com/hywax/vitepress-yandex-metrika/commit/84e2269))
+- Update setup section ([d723b93](https://github.com/hywax/vitepress-yandex-metrika/commit/d723b93))
+- Update usage section ([fd65687](https://github.com/hywax/vitepress-yandex-metrika/commit/fd65687))
+- Update configuration table ([451870d](https://github.com/hywax/vitepress-yandex-metrika/commit/451870d))
+- Refactor configuration section ([a72ad3e](https://github.com/hywax/vitepress-yandex-metrika/commit/a72ad3e))
+- Add new item on features ([378799a](https://github.com/hywax/vitepress-yandex-metrika/commit/378799a))
+
+### 🏡 Chore
+
+- ⚠️  Rename interfaces ([fc91634](https://github.com/hywax/vitepress-yandex-metrika/commit/fc91634))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Server side removed, connection now only on frontend ([2147eca](https://github.com/hywax/vitepress-yandex-metrika/commit/2147eca))
+- ⚠️  Rename interfaces ([fc91634](https://github.com/hywax/vitepress-yandex-metrika/commit/fc91634))
+
+### ❤️ Contributors
+
+- Hywax <a.hywax@gmail.com>
+
 ## v0.1.0
 
 [compare changes](https://github.com/hywax/vitepress-yandex-metrika/compare/v0.0.2...v0.1.0)
