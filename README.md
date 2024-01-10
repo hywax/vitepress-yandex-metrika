@@ -25,6 +25,7 @@ Plugin for VitePress to track Yandex Metrika statistics.
 * ✅ Support for all settings
 * 🌐 CDN option
 * 0️⃣ Zero dependencies
+* 🪄️ TypeScript support
 
 ## ✨ Installation
 
