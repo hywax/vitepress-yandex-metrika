@@ -15,8 +15,16 @@ interface Ya {
   }
 }
 
+interface ym {
+  (...args): void
+
+  a?: any[]
+  l?: number
+}
+
 declare global {
   interface Window {
     Ya?: Ya
+    ym?: ym
   }
 }
