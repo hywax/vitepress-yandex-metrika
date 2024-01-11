@@ -55,7 +55,8 @@ function injectCounter(counter: YandexMetrikaCounter, url?: string) {
   pixel.style.left = '-9999px'
 
   const wrapper = document.createElement('div')
-  wrapper.appendChild(pixel)
+  wrapper.append(pixel)
+  document.body.append(wrapper)
 }
 
 export function yandexMetrika(ctx: EnhanceAppContext, options: YandexMetrikaOptions) {
