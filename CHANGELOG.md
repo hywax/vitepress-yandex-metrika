@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.3.0
+
+[compare changes](https://github.com/hywax/vitepress-yandex-metrika/compare/v0.2.0...v0.3.0)
+
+### 🩹 Fixes
+
+- ⚠️  Pixel has been added to body ([50110b9](https://github.com/hywax/vitepress-yandex-metrika/commit/50110b9))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Pixel has been added to body ([50110b9](https://github.com/hywax/vitepress-yandex-metrika/commit/50110b9))
+
+### ❤️ Contributors
+
+- Hywax <a.hywax@gmail.com>
+
 ## v0.2.0
 
 [compare changes](https://github.com/hywax/vitepress-yandex-metrika/compare/v0.1.0...v0.2.0)
