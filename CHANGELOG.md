@@ -1,6 +1,30 @@
 # Changelog
 
 
+## v0.3.1
+
+[compare changes](https://github.com/hywax/vitepress-yandex-metrika/compare/v0.3.0...v0.3.1)
+
+### 📖 Documentation
+
+- Fix badge color ([2ffec9e](https://github.com/hywax/vitepress-yandex-metrika/commit/2ffec9e))
+
+### 🏡 Chore
+
+- **deps-dev:** Bump vite-plugin-dts from 3.7.0 to 3.7.1 ([#1](https://github.com/hywax/vitepress-yandex-metrika/pull/1))
+- **deps-dev:** Bump @vitest/coverage-v8 from 1.1.3 to 1.2.0 ([#4](https://github.com/hywax/vitepress-yandex-metrika/pull/4))
+- **deps-dev:** Bump @types/node from 20.10.8 to 20.11.2 ([#3](https://github.com/hywax/vitepress-yandex-metrika/pull/3))
+- **deps-dev:** Bump vitest from 1.1.3 to 1.2.0 ([#2](https://github.com/hywax/vitepress-yandex-metrika/pull/2))
+- **deps-dev:** Bump vite from 5.0.11 to 5.0.12 ([#7](https://github.com/hywax/vitepress-yandex-metrika/pull/7))
+- **deps-dev:** Bump @commitlint/config-conventional ([#6](https://github.com/hywax/vitepress-yandex-metrika/pull/6))
+- **deps-dev:** Bump @commitlint/cli from 18.4.4 to 18.5.0 ([#5](https://github.com/hywax/vitepress-yandex-metrika/pull/5))
+- **deps-dev:** Bump vitest from 1.2.0 to 1.2.1 ([#8](https://github.com/hywax/vitepress-yandex-metrika/pull/8))
+- **deps-dev:** Bump @antfu/eslint-config from 2.6.2 to 2.6.3 ([#9](https://github.com/hywax/vitepress-yandex-metrika/pull/9))
+
+### ❤️ Contributors
+
+- Hywax <a.hywax@gmail.com>
+
 ## v0.3.0
 
 [compare changes](https://github.com/hywax/vitepress-yandex-metrika/compare/v0.2.0...v0.3.0)
