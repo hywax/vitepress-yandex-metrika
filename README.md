@@ -102,7 +102,7 @@ This template was created under the [MIT License](LICENSE).
 
 [npm-version-src]: https://img.shields.io/npm/v/@hywax/vitepress-yandex-metrika/latest.svg?logo=hackthebox&color=4A4DFF&logoColor=fff
 [npm-version-href]: https://npmjs.com/package/@hywax/vitepress-yandex-metrika
-[npm-downloads-src]: https://img.shields.io/npm/dm/@hywax/vitepress-yandex-metrika.svg?colorA=4A4DFF
+[npm-downloads-src]: https://img.shields.io/npm/dm/@hywax/vitepress-yandex-metrika.svg?colorB=4A4DFF
 [npm-downloads-href]: https://npmjs.com/package/@hywax/vitepress-yandex-metrika
 [license-src]: https://img.shields.io/badge/License-MIT-4A4DFF?logo=opensourceinitiative&logoColor=fff
 [license-href]: https://npmjs.com/package/@hywax/vitepress-yandex-metrika
