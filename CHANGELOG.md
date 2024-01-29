@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.3.2
+
+[compare changes](https://github.com/hywax/vitepress-yandex-metrika/compare/v0.3.1...v0.3.2)
+
+### 🤖 CI
+
+- Migrate renovate config ([e09cfee](https://github.com/hywax/vitepress-yandex-metrika/commit/e09cfee))
+
+### ❤️ Contributors
+
+- Hywax ([@hywax](http://github.com/hywax))
+
 ## v0.3.1
 
 [compare changes](https://github.com/hywax/vitepress-yandex-metrika/compare/v0.3.0...v0.3.1)
