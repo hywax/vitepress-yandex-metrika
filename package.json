@@ -37,7 +37,7 @@
     "vitepress": "1.0.0-rc.41"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.6.3",
+    "@antfu/eslint-config": "^2.6.4",
     "@commitlint/cli": "^18.6.0",
     "@commitlint/config-conventional": "^18.6.0",
     "@types/node": "^20.11.16",
