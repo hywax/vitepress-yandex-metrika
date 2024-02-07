@@ -34,7 +34,7 @@
   },
   "peerDependencies": {
     "vite": "^4.0.0 || ^5.0.0",
-    "vitepress": "1.0.0-rc.41"
+    "vitepress": "1.0.0-rc.42"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.4",
@@ -46,7 +46,7 @@
     "changelogen": "^0.5.5",
     "eslint": "^8.56.0",
     "husky": "^9.0.10",
-    "lint-staged": "^15.2.1",
+    "lint-staged": "^15.2.2",
     "typescript": "^5.3.3",
     "vite": "^5.0.12",
     "vite-plugin-dts": "^3.7.2",
