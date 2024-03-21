@@ -25,7 +25,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "release": "pnpm test && pnpm build && changelogen --release && pnpm publish && git push --follow-tags",
+    "release": "pnpm test && pnpm build && changelogen --release --push && pnpm publish",
     "lint": "eslint . --fix",
     "test": "vitest --run",
     "test:watch": "vitest",
