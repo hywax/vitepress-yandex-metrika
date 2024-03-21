@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.3.4
+
+[compare changes](https://github.com/hywax/vitepress-yandex-metrika/compare/v0.3.3...v0.3.4)
+
+### 🏡 Chore
+
+- Optimize release script ([57ea397](https://github.com/hywax/vitepress-yandex-metrika/commit/57ea397))
+
+### ❤️ Contributors
+
+- Hywax ([@hywax](http://github.com/hywax))
+
 ## v0.3.3
 
 [compare changes](https://github.com/hywax/vitepress-yandex-metrika/compare/v0.3.2...v0.3.3)
