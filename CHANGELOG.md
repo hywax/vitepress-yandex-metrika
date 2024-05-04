@@ -1,6 +1,36 @@
 # Changelog
 
 
+## v0.4.0
+
+[compare changes](https://github.com/hywax/vitepress-yandex-metrika/compare/v0.3.4...v0.4.0)
+
+### 📖 Documentation
+
+- Add new package covers ([a351145](https://github.com/hywax/vitepress-yandex-metrika/commit/a351145))
+- Update readme ([213a143](https://github.com/hywax/vitepress-yandex-metrika/commit/213a143))
+- Change repository url ([15a8f32](https://github.com/hywax/vitepress-yandex-metrika/commit/15a8f32))
+
+### 🏡 Chore
+
+- ⚠️  Optimize peerDependencies ([824310b](https://github.com/hywax/vitepress-yandex-metrika/commit/824310b))
+- Update CONTRIBUTORS ([94ac9ce](https://github.com/hywax/vitepress-yandex-metrika/commit/94ac9ce))
+- Remove old package cover ([7ae9415](https://github.com/hywax/vitepress-yandex-metrika/commit/7ae9415))
+
+### 🤖 CI
+
+- Contributor credits plan ([a9ec54f](https://github.com/hywax/vitepress-yandex-metrika/commit/a9ec54f))
+- Welcome plan ([9d47d4f](https://github.com/hywax/vitepress-yandex-metrika/commit/9d47d4f))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Optimize peerDependencies ([824310b](https://github.com/hywax/vitepress-yandex-metrika/commit/824310b))
+
+### ❤️ Contributors
+
+- Hywax ([@hywax](http://github.com/hywax))
+- Bot ([@hywax-assistant](http://github.com/hywax-assistant))
+
 ## v0.3.4
 
 [compare changes](https://github.com/hywax/vitepress-yandex-metrika/compare/v0.3.3...v0.3.4)
