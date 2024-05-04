@@ -19,7 +19,6 @@
   "module": "./dist/vitepress-yandex-metrika.js",
   "types": "./dist/vitepress-yandex-metrika.d.ts",
   "files": [
-    "!dist/cover.jpg",
     "dist"
   ],
   "scripts": {
