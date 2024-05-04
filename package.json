@@ -4,7 +4,8 @@
   "version": "0.3.4",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/hywax/vitepress-yandex-metrika.git"
+    "type": "git",
+    "url": "git+https://github.com/hywax/vitepress-yandex-metrika.git"
   },
   "publishConfig": {
     "access": "public"
