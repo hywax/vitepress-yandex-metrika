@@ -1,4 +1,4 @@
-[![vitepress-yandex-metrika](https://raw.githubusercontent.com/hywax/vitepress-yandex-metrika/main/public/cover.jpg)](https://github.com/hywax/vitepress-yandex-metrika)
+[![vitepress-yandex-metrika](https://raw.githubusercontent.com/hywax/vitepress-yandex-metrika/main/.github/static/cover.png)](https://github.com/hywax/vitepress-yandex-metrika)
 
 # VitePress Yandex Metrika
 
@@ -6,45 +6,49 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 
-Plugin for VitePress to track Yandex Metrika statistics.
+**Русский** | [English](./README.en.md)
+
+Плагин для VitePress для отслеживания статистики Яндекс Метрики.
 
 <details>
-  <summary><b>Table of Contents</b></summary>
+  <summary><b>Оглавление</b></summary>
 
-* [Features](#-features)
-* [Usage](#-usage)
-  * [Setup](#-setup)
-  * [Configuration](#-configuration)
-* [License](#-license)
+* [Особенности](#-особенности)
+* [Установка](#-установка)
+* [Использование](#-использование)
+  * [Подключение](#-подключение)
+  * [Конфигурация](#-конфигурация)
+* [Вкладчики](#-вкладчики)
+* [Лицензия](#-лицензия)
 </details>
 
-## 🎯 Features
+## 🎯 Особенности
 
-* 📊 Support multiply counters
-* ✨ Correct work with SPA
-* ✅ Support for all settings
-* 🌐 CDN option
-* 0️⃣ Zero dependencies
-* 🪄️ TypeScript support
+* 📊 Поддержка нескольких счетчиков
+* ✨ Корректная работа с SPA приложениями
+* ✅ Поддержка всех настроек метрики
+* 🌐 Возможность использовать CDN для счетчиков
+* 0️⃣ 0 зависимостей
+* 🪄️ Поддержка TypeScript
 
-## ✨ Installation
+## ✨ Установка
 
 ```shell
-# Using pnpm
+# Использование pnpm
 pnpm add @hywax/vitepress-yandex-metrika -D
 
-# Using yarn
+# Использование yarn
 yarn add @hywax/vitepress-yandex-metrika -D
 
-# Using npm
+# Использование npm
 npm install @hywax/vitepress-yandex-metrika -D
 ```
 
-## ⚡ Usage
+## ⚡ Использование
 
-### 🚀 Setup
+### 🚀 Подключение
 
-Add `yandexMetrika` to the `enhanceApp` section of theme `index.ts`
+Добавьте `yandexMetrika` в раздел темы `enhanceApp` в `index.ts`.
 
 ```typescript
 // .vitepress/theme/index.ts
@@ -56,47 +60,56 @@ export default {
   extends: DefaultTheme,
   enhanceApp(ctx) {
     yandexMetrika(ctx, {
-      counter: { id: 12345678 },
+      counter: {
+        id: 12345678
+      },
     })
   },
 } satisfies Theme
 ```
 
-### ⚙️ Configuration
+### ⚙️ Конфигурация
 
-You can customize the plugin `yandexMetrika` by passing the required parameters to the settings object.
+Вы можете настроить плагин `yandexMetrika`, передав необходимые параметры в объект настроек.
 
 ```typescript
 export interface YandexMetrikaOptions {
-  enabled?: boolean                                             // default: true
+  enabled?: boolean                                             // по умолчанию: true
   counter: YandexMetrikaCounter | YandexMetrikaCounter[]
   cdn?: {
-    tag?: string                                                // default: https://mc.yandex.ru/metrika/tag.js
-    watch?: string                                              // default: https://mc.yandex.ru/watch
+    tag?: string                                                // по умолчанию: https://mc.yandex.ru/metrika/tag.js
+    watch?: string                                              // по умолчанию: https://mc.yandex.ru/watch
   }
 }
 
 export interface YandexMetrikaCounter {
   id: number
   initParams?: {
-    defer?: boolean                                             // default: false
-    clickmap?: boolean                                          // default: true
-    trackLinks?: boolean                                        // default: true
-    accurateTrackBounce?: boolean                               // default: true
-    webvisor?: boolean                                          // default: false
-    ecommerce?: boolean | string | Array<string | boolean>      // default: false
-    trustedDomains?: string[]                                   // default: -
-    childIframe?: boolean                                       // default: false
-    type?: number                                               // default: 0
-    triggerEvent?: boolean                                      // default: false
+    defer?: boolean                                             // по умолчанию: false
+    clickmap?: boolean                                          // по умолчанию: true
+    trackLinks?: boolean                                        // по умолчанию: true
+    accurateTrackBounce?: boolean                               // по умолчанию: true
+    webvisor?: boolean                                          // по умолчанию: false
+    ecommerce?: boolean | string | Array<string | boolean>      // по умолчанию: false
+    trustedDomains?: string[]                                   // по умолчанию: -
+    childIframe?: boolean                                       // по умолчанию: false
+    type?: number                                               // по умолчанию: 0
+    triggerEvent?: boolean                                      // по умолчанию: false
   }
 }
 ```
 
-More information can be found on the [documentation page](https://yandex.com/support/metrica/code/counter-initialize.html).
+Дополнительную информацию можно найти на [странице документации](https://yandex.ru/support/metrica/code/counter-initialize.html).
 
-## 📄 License
-This template was created under the [MIT License](LICENSE).
+## 🏆 Вкладчики
+
+Огромное спасибо всем, кто помогает улучшать проект. Благодаря вам проект может развиваться!
+
+<img src="https://raw.githubusercontent.com/hywax/vitepress-yandex-metrika/main/.github/static/contributors.svg" alt="VitePress Yandex Metrika Вкладчики" width="100%"/>
+
+## 📄 Лицензия
+
+Основой VitePress Yandex Metrika являет открытый исходный код, в соответствии [MIT License](LICENSE).
 
 <!-- Badges -->
 
