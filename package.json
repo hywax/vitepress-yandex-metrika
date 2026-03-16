@@ -33,7 +33,7 @@
     "prepare": "husky install"
   },
   "peerDependencies": {
-    "vitepress": "^1.6.3"
+    "vitepress": "^1.6.3 || ^2.0.0-alpha"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.17.0",
